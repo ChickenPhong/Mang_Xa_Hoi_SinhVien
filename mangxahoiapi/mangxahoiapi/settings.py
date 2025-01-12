@@ -82,6 +82,17 @@ DATABASES = {
     }
 }
 
+# Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # SMTP server của Gmail
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True  # Sử dụng TLS để mã hóa kết nối
+EMAIL_HOST_USER = 'your-email@gmail.com'  # Thay bằng email của bạn
+EMAIL_HOST_PASSWORD = 'your-email-password'  # Thay bằng mật khẩu ứng dụng (không phải mật khẩu chính)
+
+DEFAULT_FROM_EMAIL = 'your-email@gmail.com'  # Email gửi đi mặc định
+
+
 import pymysql
 
 pymysql.install_as_MySQLdb()

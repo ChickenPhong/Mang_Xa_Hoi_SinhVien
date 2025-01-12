@@ -59,6 +59,21 @@ class Migration(migrations.Migration):
                 ('objects', django.contrib.auth.models.UserManager()),
             ],
         ),
+
+        migrations.CreateModel(
+            name='CuuSinhVien',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('ma_so_sinh_vien', models.CharField(max_length=20, unique=True)),
+                ('ho_va_ten', models.CharField(max_length=100)),
+                ('password', models.CharField(max_length=100)),
+                ('dia_chi', models.TextField()),
+                ('so_dien_thoai', models.CharField(max_length=15)),
+                ('email', models.EmailField(unique=True)),
+                ('xac_nhan', models.BooleanField(default=False)),
+            ],
+        ),
+
         migrations.CreateModel(
             name='BaiDang',
             fields=[
